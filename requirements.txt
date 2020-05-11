@@ -1,0 +1,4 @@
+Pyjwt
+flask
+gunicorn
+pytest

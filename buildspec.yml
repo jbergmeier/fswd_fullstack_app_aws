@@ -20,7 +20,7 @@ phases:
       - docker build --tag $REPOSITORY_URI:$TAG .
   env:
     parameter-store:
-      JWT_SECRET: hansPWD
+      JWT_SECRET: babyFaultier89
 
   post_build:
     commands:

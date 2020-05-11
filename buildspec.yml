@@ -1,5 +1,8 @@
 ---
 version: 0.2
+env:
+  parameter-store:
+    JWT_SECRET: babyFaultier89
 
 phases:
   install:
@@ -18,10 +21,6 @@ phases:
   build:
     commands:
       - docker build --tag $REPOSITORY_URI:$TAG .
-  env:
-    parameter-store:
-      JWT_SECRET: babyFaultier89
-
   post_build:
     commands:
       - docker push $REPOSITORY_URI:$TAG

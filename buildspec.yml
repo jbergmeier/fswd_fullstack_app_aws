@@ -22,7 +22,7 @@ phases:
   build:
     commands:
       - docker build --tag $REPOSITORY_URI:$TAG .
-      - python3 test_main.py
+      - pytest test_main.py
   post_build:
     commands:
       - docker push $REPOSITORY_URI:$TAG
